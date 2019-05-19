@@ -49,7 +49,7 @@ export class MapContainer extends Component {
           {
             this.state.markers.map((marker, index) => {
               return(
-                <Marker key={index} position={{ lat: marker.lat , lng: marker.lng }} />
+                <Marker key={{index} position={{ lat: marker.lat , lng: marker.lng }} />
               )
 
             })
