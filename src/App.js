@@ -9,6 +9,7 @@ const mapStyles = {
 export class MapContainer extends Component {
   render() {
     return (
+      // map
       <Map
         google={this.props.google}
         zoom={14}
