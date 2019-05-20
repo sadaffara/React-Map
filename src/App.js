@@ -1,15 +1,19 @@
 import React, { Component } from 'react';
 import { Map, GoogleApiWrapper, Marker } from 'google-maps-react';
+import 'antd/dist/antd.css';
 
+//basic style for map
 const mapStyles = {
-  width: '100%',
-  height: '100%'
+  width: '80%',
+  height: '80%',
+  margin: '0 auto'
 };
 
 export class MapContainer extends Component {
 
   constructor(props) {
     super(props)
+    //array of markers for showing different points on map
     this.state = {
       markers : [
         {
@@ -45,7 +49,7 @@ export class MapContainer extends Component {
          lng: 51.8233
         }}
         >
-
+          {/* mapping into markers array to show it on the map */}
           {
             this.state.markers.map((marker, index) => {
               return(
@@ -60,7 +64,7 @@ export class MapContainer extends Component {
     );
   }
 }
-
+//Google API Key
 export default GoogleApiWrapper({
   apiKey: 'AIzaSyB64ikAN6mHSffolpM-fhfngsSIkNfkiGk'
 })(MapContainer);
